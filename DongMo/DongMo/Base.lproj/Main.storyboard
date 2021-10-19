@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--글쓰기-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="MemoViewController" customModule="DongMo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="테스트 중 " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Po5-A6-Pqf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="719"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" name="Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTR-BY-GKX">
+                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vlg-Nf-xTn">
+                                        <rect key="frame" x="15" y="1" width="55" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="말하기">
+                                            <color key="titleColor" name="Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="textToSpeech:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Z1r-Rw-dkg"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="XBh-Ay-Fi2">
+                                        <rect key="frame" x="190" y="1" width="55" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="듣기">
+                                            <color key="titleColor" name="Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="speechToText:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Ltb-tg-m38"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="rv7-He-uqh">
+                                        <rect key="frame" x="345" y="0.0" width="55" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="찍기">
+                                            <color key="titleColor" name="Color"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnTakePicture:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TK6-Qg-twl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VSR-X8-csP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="VTR-BY-GKX" secondAttribute="bottom" id="0oL-my-ltn"/>
+                            <constraint firstItem="VTR-BY-GKX" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="2AW-dX-1DI"/>
+                            <constraint firstItem="Po5-A6-Pqf" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="4tk-8u-HRg"/>
+                            <constraint firstItem="Po5-A6-Pqf" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="R8f-uo-CTd"/>
+                            <constraint firstItem="Po5-A6-Pqf" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="sRC-Ya-97w"/>
+                            <constraint firstItem="VTR-BY-GKX" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="vnG-EF-X5X"/>
+                            <constraint firstItem="VTR-BY-GKX" firstAttribute="top" secondItem="Po5-A6-Pqf" secondAttribute="bottom" id="w6s-xF-233"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="글쓰기" image="pencil" catalog="system" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="myTextView" destination="Po5-A6-Pqf" id="wO9-0E-oyo"/>
+                        <outlet property="speechText" destination="XBh-Ay-Fi2" id="Mth-7f-sEI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-320"/>
+        </scene>
+        <!--그리기-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="DrawViewController" customModule="DongMo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="av7-Jq-BYm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="HlE-Wj-v2Y"/>
+                                </constraints>
+                                <color key="tintColor" name="Color"/>
+                                <items>
+                                    <navigationItem id="Dwb-ni-Jhq">
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="뒤로" id="7FW-Yt-oif">
+                                                <connections>
+                                                    <action selector="undo:" destination="4Nw-L8-lE0" id="uic-Kf-syv"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem title="앞으로" id="eAT-u1-LyP">
+                                                <connections>
+                                                    <action selector="redo:" destination="4Nw-L8-lE0" id="Cw4-MW-2kr"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="av7-Jq-BYm" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="BeH-nU-3XE"/>
+                            <constraint firstItem="av7-Jq-BYm" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="dx1-2Z-hzo"/>
+                            <constraint firstItem="av7-Jq-BYm" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="wvv-Yq-eBV"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="그리기" image="pencil.tip" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="navigationBar" destination="av7-Jq-BYm" id="a0r-Xj-jUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" name="Color"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <namedColor name="Color">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
